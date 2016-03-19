@@ -1,0 +1,188 @@
+.gameWrapper
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 620px;
+}
+
+.score,
+#counterwrap
+{
+    display: none;
+}
+
+h1
+{
+    color: #755;
+}
+
+#navigation
+{
+    top: 20px;
+}
+
+.sprite
+{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+}
+
+#board
+{
+    left: 0;
+    top: 0;
+    width: 287px;
+    height: 528px;
+}
+
+#shield
+{
+    left: 100px;
+    top: 42px;
+    width: 152px;
+    height: 35px;
+}
+
+#arrow
+{
+    left: 305px;
+    top: 52px;
+    width: 92px;
+    height: 275px;
+}
+
+#instructions
+{
+    top: 532px;
+    left: 10px;
+}
+
+div.instructions
+{
+    width: 520px;
+}
+
+#instructions a
+{
+    color: #777;
+}
+
+.codepegSelection
+{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+#codepegSelectionLabel
+{
+    font-size: 90%;
+    color: #888;
+    font-weight: bold;
+    text-align: center;
+    left: 310px;
+    top: 330px;
+    width: 130px;
+}
+
+#codepegSelection1
+{
+    left: 320px;
+    top: 355px;
+}
+
+#codepegSelection2
+{
+    left: 360px;
+    top: 355px;
+}
+
+#codepegSelection3
+{
+    left: 400px;
+    top: 355px;
+}
+
+#codepegSelection4
+{
+    left: 320px;
+    top: 390px;
+}
+
+#codepegSelection5
+{
+    left: 360px;
+    top: 390px;
+}
+
+#codepegSelection6
+{
+    left: 400px;
+    top: 390px;
+}
+
+#legend
+{
+    left: 300px;
+    top: 450px;
+    width: 229px;
+    height: 69px;
+}
+
+#legendLabel1
+{
+    left: 310px;
+    top: 452px;
+    width: 229px;
+    font-size: 75%;
+    color: #777;
+}
+
+#legendLabel2
+{
+    left: 328px;
+    top: 473px;
+    width: 220px;
+    font-size: 75%;
+    color: #444;
+}
+
+#legendLabel3
+{
+    left: 328px;
+    top: 493px;
+    width: 220px;
+    font-size: 75%;
+    color: #444;
+}
+
+.codeHole
+{
+    width: 32px;
+    height: 32px;
+}
+
+.keyHole
+{
+    width: 16px;
+    height: 16px;
+}
+
+.resolveMessage
+{
+    top: 35px;
+    left: 295px;
+    width: 200px;
+    font-size: 140%;
+    display: none;
+}
+
+.restart
+{
+    color: #000;
+    font-size: 14px;
+}

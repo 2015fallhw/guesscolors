@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Guess the Colors</title>
+        <link rel="stylesheet" href="./css/shared.css" type="text/css" media="screen, projection, print">
+        <link rel="stylesheet" href="./css/default.css" type="text/css" media="screen, projection, print"
+        <meta name="viewport" id="vp" content="user-scalable=yes,width=device-width">
+        <script type="text/javascript" src="./js/default.js"></script>
+    </head>
+    <body onload="initGame()">
+
+    <div class="all">
+
+    <div id="counter">&nbsp;</div>
+
+    <div class="page">
+    
+    <h1>Guess the Colors</h1>
+
+    <div class="content">
+        <div class="gameWrapper">
+
+    <img src="./image/board.jpg" alt="" id="board" class="sprite">
+    <img src="./image/arrow.png" alt="" id="arrow" class="sprite">
+
+    <div id="codepegSelectionLabel" class="sprite">Take a pick:</div>
+
+            <img src="./image/codepeg-selection1.png" alt="" id="codepegSelection1" class="codepegSelection sprite" onmouseover="hiliteSprite("codepegSelection1")" onmouseout="loliteSprite("codepegSelection1")" onclick="pickPeg(1)">
+            <img src="./image/codepeg-selection2.png" alt="" id="codepegSelection2" class="codepegSelection sprite" onmouseover="hiliteSprite("codepegSelection2")" onmouseout="loliteSprite("codepegSelection2")" onclick="pickPeg(2)">
+            <img src="./image/codepeg-selection3.png" alt="" id="codepegSelection3" class="codepegSelection sprite" onmouseover="hiliteSprite("codepegSelection3")" onmouseout="loliteSprite("codepegSelection3")" onclick="pickPeg(3)">
+            <img src="./image/codepeg-selection4.png" alt="" id="codepegSelection4" class="codepegSelection sprite" onmouseover="hiliteSprite("codepegSelection4")" onmouseout="loliteSprite("codepegSelection4")" onclick="pickPeg(4)">
+            <img src="./image/codepeg-selection5.png" alt="" id="codepegSelection5" class="codepegSelection sprite" onmouseover="hiliteSprite("codepegSelection5")" onmouseout="loliteSprite("codepegSelection5")" onclick="pickPeg(5)">
+            <img src="./image/codepeg-selection6.png" alt="" id="codepegSelection6" class="codepegSelection sprite" onmouseover="hiliteSprite("codepegSelection6")" onmouseout="loliteSprite("codepegSelection6")" onclick="pickPeg(6)">
+    
+    <img src="./image/legend.png" alt="" id="legend" class="sprite">
+    <div id="legendLabel1" class="sprite">Legend</div>
+    <div id="legendLabel2" class="sprite">Correct color, but at wrong position</div>
+    <div id="legendLabel3" class="sprite">Correct color, correct position</div>
+
+    <div id="instructions" class="instructions sprite">
+        Guess which colors are hidden at the top! Each round you pick 4 colored pegs from the right side – then, black and white pegs will hint at how good your guess is. 
+    </div>
+
+    <div id="codeHole1_1" class="codeHole sprite" style="left: 109px; top: 36px"><img src="./image/codepeg6.png" alt=""></div>
+<div id="codeHole2_1" class="codeHole sprite" style="left: 144px; top: 36px"><img src="./image/codepeg3.png" alt=""></div>
+<div id="codeHole3_1" class="codeHole sprite" style="left: 179px; top: 36px"><img src="./image/codepeg1.png" alt=""></div>
+<div id="codeHole4_1" class="codeHole sprite" style="left: 214px; top: 36px"><img src="./image/codepeg6.png" alt=""></div>
+<div id="codeHole1_2" class="codeHole sprite" style="left: 109px; top: 98px">&nbsp;</div>
+<div id="codeHole2_2" class="codeHole sprite" style="left: 144px; top: 98px">&nbsp;</div>
+<div id="codeHole3_2" class="codeHole sprite" style="left: 179px; top: 98px">&nbsp;</div>
+<div id="codeHole4_2" class="codeHole sprite" style="left: 214px; top: 98px">&nbsp;</div>
+<div id="codeHole1_3" class="codeHole sprite" style="left: 109px; top: 144px">&nbsp;</div>
+<div id="codeHole2_3" class="codeHole sprite" style="left: 144px; top: 144px">&nbsp;</div>
+<div id="codeHole3_3" class="codeHole sprite" style="left: 179px; top: 144px">&nbsp;</div>
+<div id="codeHole4_3" class="codeHole sprite" style="left: 214px; top: 144px">&nbsp;</div>
+<div id="codeHole1_4" class="codeHole sprite" style="left: 109px; top: 190px">&nbsp;</div>
+<div id="codeHole2_4" class="codeHole sprite" style="left: 144px; top: 190px">&nbsp;</div>
+<div id="codeHole3_4" class="codeHole sprite" style="left: 179px; top: 190px">&nbsp;</div>
+<div id="codeHole4_4" class="codeHole sprite" style="left: 214px; top: 190px">&nbsp;</div>
+<div id="codeHole1_5" class="codeHole sprite" style="left: 109px; top: 236px">&nbsp;</div>
+<div id="codeHole2_5" class="codeHole sprite" style="left: 144px; top: 236px">&nbsp;</div>
+<div id="codeHole3_5" class="codeHole sprite" style="left: 179px; top: 236px">&nbsp;</div>
+<div id="codeHole4_5" class="codeHole sprite" style="left: 214px; top: 236px">&nbsp;</div>
+<div id="codeHole1_6" class="codeHole sprite" style="left: 109px; top: 282px">&nbsp;</div>
+<div id="codeHole2_6" class="codeHole sprite" style="left: 144px; top: 282px">&nbsp;</div>
+<div id="codeHole3_6" class="codeHole sprite" style="left: 179px; top: 282px">&nbsp;</div>
+<div id="codeHole4_6" class="codeHole sprite" style="left: 214px; top: 282px">&nbsp;</div>
+<div id="codeHole1_7" class="codeHole sprite" style="left: 109px; top: 328px">&nbsp;</div>
+<div id="codeHole2_7" class="codeHole sprite" style="left: 144px; top: 328px">&nbsp;</div>
+<div id="codeHole3_7" class="codeHole sprite" style="left: 179px; top: 328px">&nbsp;</div>
+<div id="codeHole4_7" class="codeHole sprite" style="left: 214px; top: 328px">&nbsp;</div>
+<div id="codeHole1_8" class="codeHole sprite" style="left: 109px; top: 374px">&nbsp;</div>
+<div id="codeHole2_8" class="codeHole sprite" style="left: 144px; top: 374px">&nbsp;</div>
+<div id="codeHole3_8" class="codeHole sprite" style="left: 179px; top: 374px">&nbsp;</div>
+<div id="codeHole4_8" class="codeHole sprite" style="left: 214px; top: 374px">&nbsp;</div>
+<div id="codeHole1_9" class="codeHole sprite" style="left: 109px; top: 420px">&nbsp;</div>
+<div id="codeHole2_9" class="codeHole sprite" style="left: 144px; top: 420px">&nbsp;</div>
+<div id="codeHole3_9" class="codeHole sprite" style="left: 179px; top: 420px">&nbsp;</div>
+<div id="codeHole4_9" class="codeHole sprite" style="left: 214px; top: 420px">&nbsp;</div>
+<div id="codeHole1_10" class="codeHole sprite" style="left: 109px; top: 466px">&nbsp;</div>
+<div id="codeHole2_10" class="codeHole sprite" style="left: 144px; top: 466px">&nbsp;</div>
+<div id="codeHole3_10" class="codeHole sprite" style="left: 179px; top: 466px">&nbsp;</div>
+<div id="codeHole4_10" class="codeHole sprite" style="left: 214px; top: 466px">&nbsp;</div>
+<div id="keyHole1_2" class="keyHole sprite" style="left: 51px; top: 95px">&nbsp;</div>
+<div id="keyHole2_2" class="keyHole sprite" style="left: 72px; top: 95px">&nbsp;</div>
+<div id="keyHole3_2" class="keyHole sprite" style="left: 51px; top: 114px">&nbsp;</div>
+<div id="keyHole4_2" class="keyHole sprite" style="left: 72px; top: 114px">&nbsp;</div>
+<div id="keyHole1_3" class="keyHole sprite" style="left: 51px; top: 141px">&nbsp;</div>
+<div id="keyHole2_3" class="keyHole sprite" style="left: 72px; top: 141px">&nbsp;</div>
+<div id="keyHole3_3" class="keyHole sprite" style="left: 51px; top: 160px">&nbsp;</div>
+<div id="keyHole4_3" class="keyHole sprite" style="left: 72px; top: 160px">&nbsp;</div>
+<div id="keyHole1_4" class="keyHole sprite" style="left: 51px; top: 187px">&nbsp;</div>
+<div id="keyHole2_4" class="keyHole sprite" style="left: 72px; top: 187px">&nbsp;</div>
+<div id="keyHole3_4" class="keyHole sprite" style="left: 51px; top: 206px">&nbsp;</div>
+<div id="keyHole4_4" class="keyHole sprite" style="left: 72px; top: 206px">&nbsp;</div>
+<div id="keyHole1_5" class="keyHole sprite" style="left: 51px; top: 233px">&nbsp;</div>
+<div id="keyHole2_5" class="keyHole sprite" style="left: 72px; top: 233px">&nbsp;</div>
+<div id="keyHole3_5" class="keyHole sprite" style="left: 51px; top: 252px">&nbsp;</div>
+<div id="keyHole4_5" class="keyHole sprite" style="left: 72px; top: 252px">&nbsp;</div>
+<div id="keyHole1_6" class="keyHole sprite" style="left: 51px; top: 279px">&nbsp;</div>
+<div id="keyHole2_6" class="keyHole sprite" style="left: 72px; top: 279px">&nbsp;</div>
+<div id="keyHole3_6" class="keyHole sprite" style="left: 51px; top: 298px">&nbsp;</div>
+<div id="keyHole4_6" class="keyHole sprite" style="left: 72px; top: 298px">&nbsp;</div>
+<div id="keyHole1_7" class="keyHole sprite" style="left: 51px; top: 325px">&nbsp;</div>
+<div id="keyHole2_7" class="keyHole sprite" style="left: 72px; top: 325px">&nbsp;</div>
+<div id="keyHole3_7" class="keyHole sprite" style="left: 51px; top: 344px">&nbsp;</div>
+<div id="keyHole4_7" class="keyHole sprite" style="left: 72px; top: 344px">&nbsp;</div>
+<div id="keyHole1_8" class="keyHole sprite" style="left: 51px; top: 371px">&nbsp;</div>
+<div id="keyHole2_8" class="keyHole sprite" style="left: 72px; top: 371px">&nbsp;</div>
+<div id="keyHole3_8" class="keyHole sprite" style="left: 51px; top: 390px">&nbsp;</div>
+<div id="keyHole4_8" class="keyHole sprite" style="left: 72px; top: 390px">&nbsp;</div>
+<div id="keyHole1_9" class="keyHole sprite" style="left: 51px; top: 417px">&nbsp;</div>
+<div id="keyHole2_9" class="keyHole sprite" style="left: 72px; top: 417px">&nbsp;</div>
+<div id="keyHole3_9" class="keyHole sprite" style="left: 51px; top: 436px">&nbsp;</div>
+<div id="keyHole4_9" class="keyHole sprite" style="left: 72px; top: 436px">&nbsp;</div>
+<div id="keyHole1_10" class="keyHole sprite" style="left: 51px; top: 463px">&nbsp;</div>
+<div id="keyHole2_10" class="keyHole sprite" style="left: 72px; top: 463px">&nbsp;</div>
+<div id="keyHole3_10" class="keyHole sprite" style="left: 51px; top: 482px">&nbsp;</div>
+<div id="keyHole4_10" class="keyHole sprite" style="left: 72px; top: 482px">&nbsp;</div>
+
+<img src="./image/shield.png" alt="" id="shield" class="sprite">
+
+</body></html>
